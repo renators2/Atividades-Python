@@ -1,0 +1,7 @@
+# INDICADOR DE NUMERO IMPAR OU PAR
+
+valor=int(input("Digite o numero: "))
+if valor%2==0:#o resto da divisão do número por 2
+    print("o número é par!")
+else:
+    print("o número é impar!")
