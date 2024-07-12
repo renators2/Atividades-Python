@@ -1,0 +1,8 @@
+#CALCULADORA DE METROS PARA CM
+try:
+    print("Calculadora de metros -> cm")
+    m=float(input("Digite o numero: "))
+    f=m*100
+    print("O resultado da conversão de {}m é equivalente a {}cm.".format(m,f))
+except:
+    print("Error")
