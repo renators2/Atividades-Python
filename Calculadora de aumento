@@ -1,0 +1,31 @@
+#CALCULADRA DE AUMENTO SALARIO COM BASE NO CARGO
+'''
+Programador de Sistemas = 30%
+Analista de Sistemas = 20%
+Analista de Banco de dados = 15%
+'''
+def main():
+    try:
+        salario=float(input("Digite o salário do funcionário: "))
+        cargo=input("Digite o cargo do funcionário: ")
+        cargo_lower=cargo.lower()
+        novo_salario=calculadora_de_aumento(salario,cargo_lower) #APLICAR A NOVA FUNÇÃO
+        if novo_salario is not None:
+            print("Novo salário R$ {:.2f}".format(novo_salario))       
+    except ValueError:
+        print("Por favor, digite um valor numérico para o salário.")
+def calculadora_de_aumento(salario,cargo_lower):
+    if cargo_lower == "programador de sistemas":
+        aumento_percentual=30
+    elif cargo_lower == "analista de sistemas":
+        aumento_percentual=20
+    elif cargo_lower == "analista de banco de dados":
+        aumento_percentual=15
+    else:
+        print("Cargo inválido.")
+        return None
+    aumento = (salario*aumento_percentual)/100
+    novo_salario=salario+aumento
+    return novo_salario     
+if __name__ == "__main__":
+    main()
