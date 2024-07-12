@@ -1,0 +1,20 @@
+#Calculadora de média e soma de valores
+nota1=float(input("digite a nota da 1ª und: "))
+nota2=float(input("digite a nota da 2ª und: "))
+nota3=float(input("digite a nota da 3ª und: "))
+nota4=float(input("digite a nota da 4ª und: "))
+def calc_media():
+    total=nota1+nota2+nota3+nota4
+    media=total/4
+    if media>=7:
+        print ("Aluno aprovado")
+    elif media>9:
+        print ("Excelente!!")
+    elif media>5:
+        print ("Reprovado!")
+    elif media<3:
+        print ("Analfabeto!")
+    else:
+        print
+resultado=calc_media()
+print(resultado)
