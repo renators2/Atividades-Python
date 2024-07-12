@@ -1,0 +1,25 @@
+"""Construa um programa que receba o nome e o preço de 3
+medicamentos de uma drogaria (considere que o usuário in
+formou cinco medicamentos distintos). O programa deve informar o nome e o preço do medicamento mais barato, bem
+como a média aritmética dos preços informados."""
+
+medicamentos = []
+for i in range(3):
+    nome = input("Digite o nome do {}º medicamento: ".format(i + 1))
+    preco_str = input("Digite o preço do {}º medicamento: ".format(i + 1)).replace(",", ".")
+    preco = float(preco_str)
+    medicamentos.append((nome, preco))
+
+# Medicamento mais em conta
+mais_barato = min(medicamentos, key=lambda x: x[1])
+#min=econtra o menor valor da lista de medicamentos
+#lambda vai olhar para cada par e encontrar o menor valor
+
+# Média dos preços
+media = sum(m[1] for m in medicamentos) / len(medicamentos)
+#sum = calcula a soma de todos os preços dos medicamentos na lista
+#for m in medicamentos = percorre todos os medicamentos da lista, um por um, e pega o segundo elemento de cad para (preço). Depois soma tudo
+#/len(medicamentos) vamos dividir pelo total de medicamentos da lista
+
+print("O medicamento mais barato é: {} - R${:.2f}".format(mais_barato[0], mais_barato[1]))
+print("A média dos preços dos medicamentos é: R${:.2f}".format(media))
