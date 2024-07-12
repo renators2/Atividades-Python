@@ -1,0 +1,4 @@
+#CALCULADORA DE KM/H para M/S
+kmph=float(input("Digite a velocidade de Km/h: "))
+mps=(kmph*1000)/3600
+print("A velocidade final é {:.2f}".format(mps))
