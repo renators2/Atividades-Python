@@ -1,0 +1,24 @@
+#VALIDANDO ACESSO DE USUÁRIO
+import getpass #para ocultar a senha na hora de ser digitada
+def main():
+    try:
+        usuario=input("Digite seu usuário: ")
+        senha=getpass.getpass("Digite sua senha: ")#ocultar a senha na hora de digitar
+        if validar_acesso(usuario,senha):
+            print("Seja bem vindo!")
+        else:
+            print("Usuário e senha não conferem.")
+    except Exception as e:
+        print("Erro: {}".format(e))
+def validar_acesso(usuario,senha):
+    autorizados={
+        "Renato":"123456",
+        "Rinaldo":"abcd123",
+        "Surama":"tereza"
+    }
+    if usuario in autorizados and senha == autorizados[usuario]:
+        return True
+    else:
+        return False
+if __name__ == "__main__":
+    main()
