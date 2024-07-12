@@ -1,0 +1,19 @@
+#ingnição de um foguete
+import time
+
+def main():
+    print("Contagem regressiva para o lançamento do foguete!")
+    try:
+        segundos=int(input("Digite a quantidade de segundos para contagem regressiva: "))
+        contagem_regressiva(segundos)   
+    except ValueError:
+        print("Por favor, digite um valor inteiro para os segundos.")
+def contagem_regressiva(segundos):
+    while segundos>0:
+        print("Contagem regressiva: {} segundos.".format(segundos))
+        time.sleep(1) #aguarde 1 segundo
+        segundos-=1
+    print("Foi!🚀")
+    
+if __name__ == "__main__":
+    main()
