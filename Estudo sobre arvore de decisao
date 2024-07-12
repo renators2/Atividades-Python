@@ -1,0 +1,19 @@
+#Arvore de decisão
+idade=int(input("idade: "))
+renda=float(input("renda: "))
+experiencia=int(input("expperiencia: "))
+divida=float(input("divida: "))
+
+if idade>=18:
+    if renda>=500:
+        if experiencia>=2:
+            if divida<=2000:
+                print("Parabéns! Você é elegível.")
+            else:
+                print("Desculpe mas não foi aprovado.")
+        else:
+            print("Desculpe mais você não possui experiência suficiente!")
+    else: 
+        print("Desculpe mas sua renda é inferior ao necessário.")
+else:
+    print("Desculpe mas sua idade não é permitida!")
