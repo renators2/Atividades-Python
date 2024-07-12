@@ -1,0 +1,15 @@
+#CALCULADORA DE VELOCIDADE DE UM OBJETO
+
+dist=float(input("Digite a distância percorrida em metros: "))
+temp=float(input("Digite o tempo gasto segundos: "))
+def calc_vel():#o valor final é em ms
+    if temp!=0:
+        vel=dist/temp
+        return vel
+    else:
+        print("Erro: o tempo não pode ser zero!")
+        return None
+veloFinal=calc_vel()
+kmh=veloFinal*3.6 #para converter ms em km/h
+if veloFinal is not None:
+    print("A velocidade do objeto é de km/h {}".format(round(kmh,2)))
