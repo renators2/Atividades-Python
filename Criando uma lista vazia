@@ -1,0 +1,14 @@
+#lista vazia
+idade=[]
+while True:
+    valor=input("""
+    Digite "sair" para encerrar
+    Digite a idade: """)
+    if valor.lower()=="sair":
+        break
+    #necessário converter para inteiro porque ele vai receber o nome sair para fechar o programa
+    #se não tivesse sair poderia color o int(input("Digite o valor"))
+    nvidade=int(valor)
+    idade.append(nvidade)
+    
+print("Idades digitadas: {}".format(idade))
