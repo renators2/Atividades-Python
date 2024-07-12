@@ -1,0 +1,9 @@
+def votacao():
+    idade = input("Qual sua idade? ")
+    if int(idade) in range (16,18):
+        print("Voto facultativo!")
+    elif int(idade) >= 18:
+        print("Voto obrigatório!")
+    else:
+        print("Proibido")
+votacao()
