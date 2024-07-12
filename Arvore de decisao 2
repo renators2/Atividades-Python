@@ -1,0 +1,21 @@
+
+idade:int(input("Qual sua idade? "))
+sexo:input("Você é homem ou mulher? ")
+salario:float(input("Quanto você ganha? "))
+experiencia:int(input("Quantos anos de experiência? ")) 
+    
+sexoM=sexo.lower()
+
+if idade>=18:
+    if sexoM=="masculino":
+        if salario>500:
+            if experiencia>2:
+                print("Parabens você esta contratado!")
+            else:
+                print("Desculpe, mas não foi dessa vez!")
+        else:
+            print("Infelizmente seu salário é inferior a R$ 500")
+    else:
+        print("Para esta vaga estamos precisando apenas de homens!")
+else:
+    print("Infelizmente sua idade não é suficiente.")
