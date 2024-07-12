@@ -1,0 +1,19 @@
+def calculadora(numero):
+    if numero%2==0:
+        resultado=numero**2
+        print("Este número é PAR.")
+    else:
+        resultado=numero**3
+        print("Este número é IMPAR.")
+    return resultado
+def main():
+    try:
+        numero=int(input("Digite um número inteiro positivo: "))
+        if numero < 0:
+            raise ValueError("Digite um número inteiro positivo.")
+        resultado=calculadora(numero)
+        print("Resultado é: {}".format(resultado))
+    except ValueError as e:
+        print("Erro {}".format(e))
+if __name__=="__main__":
+    main()
