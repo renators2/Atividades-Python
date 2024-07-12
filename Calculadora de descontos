@@ -1,0 +1,34 @@
+#CALCULADORA DE DESCONTO COM BASE NA TABELA
+'''
+Valor fixo do produto: R$ 12.50
+Descontos:
+    Até 5 Camisas -- 3% de desconto
+    Acima de 5 e até 10 --- 5% de desconto
+    Acima de 10 camisas --- 7% de desconto
+'''
+camisas=float(input("Digite a quantidade de camisas: "))
+
+if camisas<=5:
+    total=camisas*12.50
+    desconto=(total*3)/100
+    print("O total foi de R${:.2f}.".format(total))
+    print("Desconto de R${:.2f}.".format(desconto))
+    valor_final=total-desconto
+    valor_final_positivo=abs(valor_final)
+    print("Valor a pagar com desconto é R${:.2f}".format(valor_final_positivo))
+elif camisas>5 and camisas<=10:
+    total=camisas*12.50
+    desconto=(total*5)/100
+    print("O total foi de R${:.2f}.".format(total))
+    print("Desconto de R${:.2f}.".format(desconto))
+    valor_final=total-desconto
+    valor_final_positivo=abs(valor_final)
+    print("Valor a pagar com desconto é R${:.2f}".format(valor_final_positivo))
+else:
+    total=camisas*12.50
+    desconto=(total*7)/100
+    print("O total foi de R${:.2f}.".format(total))
+    print("Desconto de R${:.2f}.".format(desconto))
+    valor_final=total-desconto
+    valor_final_positivo=abs(valor_final)
+    print("Valor a pagar com desconto é R${:.2f}".format(valor_final_positivo))
